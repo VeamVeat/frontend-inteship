@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Nano" />
+    <meta property="og:description"
+        content="В компании NANO вы получите полный комплекс транспортно-экспедиционных услуг." />
+    <meta property="og:image" content="img/webs.png" />
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Форма заказа -->
+    <div id="myPopup" class="popup_box">
+        <div class="popup_box__click">
+
+            <!-- Закрытие формы -->
+            <img id='exit-btn' src="img/cancel.svg" alt="exit">
+            
+            <!-- Тело формы -->
+            <div class="popup_box__click__form">
+                <h2 class="popup_box__click__form__head">
+                    Закажите звонок
+                </h2>
+                <p class="popup_box__click__form__desc">
+                    Мы позвоним или напишем вам, чтобы оформить ваш заказ
+                </p>
+
+                <form action="#">
+                    <label class="popup">
+                        <input class="popup__field" type="text" placeholder="Вадим" name='name' />
+                        <span class="popup__label">Имя</span>
+                    </label>
+                    <label class="popup">
+                        <input class="popup__field" type="text" placeholder="+1..." name='phone' />
+                        <span class="popup__label">Телефон</span>
+                    </label>
+
+                    <button id='closePopup' class="popup_box__click__form__btn" type="submit">Заказать</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main_container">
+        <header class="head">
+              
+            <!-- скрыть и показать меню -->
+            <input id="menu__toggle" class="for-mobile" type="checkbox" />
+            <label class="menu__btn for-mobile" for="menu__toggle">
+                <span></span>
+            </label>
+
+            <!--  header - menu  -->
+            <nav class="navigation main_container__navigation">
+                <img class="navigation__logo" src="img/Logo.svg" alt="Logo">
+                <a class="navigation__ref" aria-current="page" href="#">О нас</a>
+                <a class="navigation__ref" href="#">Услуги</a>
+                <a class="navigation__ref" href="#">Контакты</a>
+
+                <span class="for-mobile">
+                    <img src="img/ru.svg" alt="ru">
+                    <img id='ge-flag' src="img/ge.svg" alt="ge">
+                    <img src="img/eng.svg" alt="eng">
+                </span>
+
+                <div class="menu_language">
+                    <ul class="menu_language_list">
+                        <li>
+                            <span class="menu_language_arrow"></span>
+                            <a href="#" class="menu_language_link">RU</a>
+                            <img src="./img/country/russia.svg" class="menu_language_link_img" alt="#">
+
+                            <!-- img -->
+                            <ul class="menu_sub_language_list">
+                                <!-- <li>
+                                    <a href="#" class="menu_sub_language_link">RU</a>
+                                    <img src="./img/country/russia.svg" class="menu_language_link_img" alt="#">
+                                </li> -->
+                                <li>
+                                    <a href="#" class="menu_sub_language_link">GE</a>
+                                    <img src="./img/country/georgia.svg" class="menu_sub_language_link_img" alt="#">
+                                </li>
+                                <li>
+                                    <a href="#" class="menu_sub_language_link">EN</a>
+                                    <img src="./img/country/united-kingdom .svg" class="menu_sub_language_link_img" alt="#">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- language -->
+                <!-- <div class="dropdown">
+                    <div class="dropbtn text_btn">
+                        <img id='chLang' src="img/arrow.svg" alt="dropmenu">
+                        RU
+                    </div>
+
+                    <div id='dropbox' class="dropdown__content">
+                        <a class='ru text_btn' href="#"> <img src="img/up.png" alt="dropmenu">RU</a>
+                        <a class='ge text_btn' href="#">GE</a>
+                        <a class='eng text_btn' href="#">EN</a>
+                    </div>
+
+                </div> -->
+
+            </nav>
+
+        </header>
+
+        <!-- контент -->
+        <div class="main_container__content">
+            
+            <img src="img/banner.png" alt="banner" class="main_container__content__banner">
+            <div class="info">
+                <h2 class="info__company">
+                    Добро пожаловать на сайт компании ООО "NANO logistics group"
+                </h2>
+                <p class="info__desc">
+                    В компании NANO вы получите полный комплекс транспортно-экспедиционных услуг. Мы работаем с
+                    перевозками по принципу «door to door». Выполняем обещания по срокам, оформляем гарантии на
+                    сохранность, отслеживаем местонахождение груза. Нам можно доверить все: от консолидации груза до
+                    таможенного оформления и доставки в любой регион мира
+                </p>
+                <p class="info__warning">
+                    *Мы НЕ занимаемся: карго, оформлением товаров для частных лиц, оформлением автотранспорта,
+                    оформлением акцизных товаров (духи, алкоголь), оформлением санкционных товаров, оформлением
+                    продуктов питания
+                </p>
+            </div>
+
+            <div class="service">
+                <h2 class="service__head">
+                    Выбирая нас, Вы получите
+                </h2>
+                <div class="service__block">
+                    <div class="service__sell">
+                        <img class='service__img' src="img/service1.png" alt="img">
+                        <p>Гарантию неизменной стоимости. Без скрытых условий!</p>
+                    </div>
+                    <div class="service__sell">
+                        <img class='service__img' src="img/service2.png" alt="image">
+                        <p>Доступность 24/7 в процессе работы</p>
+                    </div>
+                    <div class="service__sell">
+                        <img class='service__img' src="img/service3.png" alt="image">
+                        <p>Подбор индивидуального таможенного решения</p>
+                    </div>
+                </div>
+                <div class="service__block">
+                    <div class="service__sell">
+                        <img class='service__img' src="img/service4.png" alt="image">
+                        <p>Надежного партнера. Более 20 лет на рынке</p>
+                    </div>
+                    <div class="service__sell">
+                        <img class='service__img' src="img/service5.png" alt="image">
+                        <p>Никаких задержек. Доставим груз в кротчайшие сроки</p>
+                    </div>
+                    <div class="service__sell">
+                        <img class='service__img' src="img/service6.png" alt="image">
+                        <p>Экономию до 50% бюджета за счет оптимизации логистики</p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <!-- слайдер v2 -->
+        <div class="slider">
+            <div class="slider_item slider_item_img slide1">
+                <!-- <img src="./img/big/1.png" alt="" class="slider_item_img"> -->
+
+                <div class="slider-caption">
+                    <h5 class="slider-caption__subtitle">Наши услуги</h5>
+                    <h1 class="slider-caption__head">Авия перевозки</h1>
+                    <p class="slider-caption__info">Мы работаем напрямую с авиакомпаниями, поэтому
+                        гарантируем грамотные логистические
+                        услуги и адекватные цены.</p>
+                    <button id='openPopup' class="send_form order-btn">Заказать</button>
+                </div>
+
+            </div>
+            <div class="slider_item slider_item_img slide2">
+                <!-- <img src="./img/big/2.png" alt="" class="slider_item_img"> -->
+
+               <div class="slider-caption">
+                    <h5 class="slider-caption__subtitle">Наши услуги</h5>
+                    <h1 class="slider-caption__head">Морские перевозки</h1>
+                    <p class="slider-caption__info">Применение налаженных каналов поставок дает
+                        возможность организовать доставку «от двери до двери» с применением мультимодальных
+                        схем, так как судоходные линии предполагают транспортировку из одного порта в
+                        другой.</p>
+                        <button id='openPopup' class="send_form order-btn">Заказать</button>
+                </div>
+
+            </div>
+            <div class="slider_item slider_item_img slide3">
+                <!-- <img src="./img/big/3.png" alt="" class="slider_item_img"> -->
+
+                <div class="slider-caption">
+                    <h5 class="slider-caption__subtitle">Наши услуги</h5>
+                    <h1 class="slider-caption__head">Жд перевозки</h1>
+                    <p class="slider-caption__info">У нас есть прямые договоры с ведущими железнодорожными
+                        операторами, поэтому мы предлагаем адекватные цены без накруток.</p>
+                    <button id='openPopup' class="send_form order-btn">Заказать</button> 
+                </div>
+
+            </div>
+            <div class="slider_item slider_item_img slide4">
+                <!-- <img src="./img/big/4.png" alt="" class="slider_item_img"> -->
+
+                <div class="slider-caption">
+                    <h5 class="slider-caption__subtitle">Наши услуги</h5>
+                    <h1 class="slider-caption__head">Сборные грузы</h1>
+                    <p class="slider-caption__info">Наши сотрудники подберут для вас оптимальную
+                        логистическую схему доставки (LCL, LTL, авиа+авто). Также мы произведем все расчеты
+                        и проконсультируем по любым вопросам.</p>
+                    <button id='openPopup' class="send_form order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="slider_item slider_item_img slide5">
+                <!-- <img src="./img/big/5.png" alt="" class="slider_item_img"> -->
+
+                <div class="slider-caption">
+                    <h5 class="slider-caption__subtitle">Наши услуги</h5>
+                    <h1 class="slider-caption__head ">Таможенное оформление</h1>
+                    <p class="slider-caption__info">При заказе вам не нужно будет тратить время и деньги
+                        на работу с финансовой стороной перевозки, мы сделаем это за вас.</p>
+                        <button id='openPopup' class="send_form order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="slider_item slider_item_img slide6">
+                <!-- <img src="./img/big/6.png" alt="" class="slider_item_img"> -->
+
+                <div class="slider-caption">
+                    <h5 class="slider-caption__subtitle">Наши услуги</h5>
+                    <h1 class="slider-caption__head">Консультационные услуги</h1>
+                    <p class="slider-caption__info">NANO обладает богатым опытом, профессиональными
+                        знаниями и необходимыми ресурсами, чтобы осуществлять консультации по вопросам
+                        логистики и таможенного оформления.</p>
+                        <button id='openPopup' class="send_form order-btn">Заказать</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- форма расчета стоимости -->
+        <div class="main_container__content">
+            <div class="estimate">
+                <h2 class="estimate__head">Расчитать стоимость услуги</h2>
+                <div class="estimate__block">
+                    <div class="estimate__block__form">
+                        <form action="#"><label class="input">
+                                <input class="input__field" type="text" placeholder="Бангког" name='from' />
+                                <span class="input__label">Пункт отправления</span>
+                            </label>
+                            <label class="input">
+                                <input class="input__field" type="text" placeholder="Москва" name='to' />
+                                <span class="input__label">Пункт назначения</span>
+                            </label>
+                            <label class="input">
+                                <input class="input__field" type="text" placeholder="Хрупкий и т.п." name='property' />
+                                <span class="input__label">Характеристика груза</span>
+                            </label>
+                            <label class="input">
+                                <input class="input__field" type="text" placeholder="+1..." name='phone' />
+                                <span class="input__label">Телефон</span>
+                            </label>
+                            <label class="input">
+                                <input class="input__field" type="text" placeholder="mail@..." name='email' />
+                                <span class="input__label">E-mail</span>
+                            </label>
+                            <button class="send_form" type="submit">Получить результат</button>
+                        </form>
+                    </div>
+                    <img src="img/nanogrp.png" alt="nano" class="estimate__block__img">
+                </div>
+
+            </div>
+            <div class="contact_list">
+                <h1 class="contact_list__head">Наши контакты</h1>
+                <ul class="contact_list__adress">
+                    <li class="_email" href="mailto:info@partumllc.ru">info@partumllc.ru</li>
+                    <li class="_phone" href="tel:+74996860536"> +7(499) 686-05-36</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="main_container__navigation footer__box">
+                <img class="footer__box__logo" src="img/Logo.svg" alt="">
+                <div class="footer__box__service">
+                    <ul class="footer__list">
+                        <li class="footer__list__main">Услуги</li>
+                        <li>Авиа перевозки</li>
+                        <li>Морские перевозки</li>
+                        <li>Жд перевозки</li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li>Сборные грузы</li>
+                        <li>Таможенное оформление</li>
+                        <li>Консультационные услуги</li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__list__main">Контакты</li>
+                        <li>info@partumllc.ru</li>
+                        <li>+7(499) 686-05-36</li>
+                        <li>Language
+                            <span>
+                                <img src="img/ru.svg" alt="ru">
+                                <img src="img/ge.svg" alt="ge">
+                                <img src="img/eng.svg" alt="eng">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__hidden_block">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="slick.min.js"></script>
+</body>
+
+</html>
